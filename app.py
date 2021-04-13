@@ -18,6 +18,8 @@ def home():
     return 'ya esta'
 
 # Carga de  registros en la base de datos
+
+
 @app.route('/Carga')
 def cargar():
 
@@ -58,11 +60,12 @@ def cargar():
     # Ciclo para guardar los registros en la base de datos, con posibles mejoras para carga de datos de gran volumen
     for es, ces, nomM, col, idcol, cp in zip(Estados, codigoEstado, municipios, colonias, idCol, StrCodigos):
 
-        connection = pymysql.connect(user='root',
-                                     password='',
+        connection = pymysql.connect(user='locia@codigospdb',
+                                     password='Gal14695238',
                                      database='codigospostales_bd',
-                                     host='localhost',
+                                     host='codigospdb.mysql.database.azure.com',
                                      cursorclass=pymysql.cursors.DictCursor,
+                                     ssl={'ca': './BaltimoreCyberTrustRoot.crt.pem'}
                                      )
 
         with connection:
@@ -135,12 +138,14 @@ def cargar():
 def colonia(CP):
     mostrar = []
     if type(CP) == int:
-        connection = pymysql.connect(user='root',
-                                     password='',
+        connection = pymysql.connect(user='locia@codigospdb',
+                                     password='Gal14695238',
                                      database='codigospostales_bd',
-                                     host='localhost',
+                                     host='codigospdb.mysql.database.azure.com',
                                      cursorclass=pymysql.cursors.DictCursor,
+                                     ssl={'ca': './BaltimoreCyberTrustRoot.crt.pem'}
                                      )
+
         CP = str(CP)
         with connection:
             with connection.cursor() as cursor:
@@ -182,11 +187,12 @@ def colonia(CP):
 @app.route('/coloniasNombre/<nombre>')
 def coloniaNombre(nombre):
     mostrar = []
-    connection = pymysql.connect(user='root',
-                                 password='',
+    connection = pymysql.connect(user='locia@codigospdb',
+                                 password='Gal14695238',
                                  database='codigospostales_bd',
-                                 host='localhost',
+                                 host='codigospdb.mysql.database.azure.com',
                                  cursorclass=pymysql.cursors.DictCursor,
+                                 ssl={'ca': './BaltimoreCyberTrustRoot.crt.pem'}
                                  )
 
     with connection:
@@ -228,11 +234,12 @@ def coloniaNombre(nombre):
 @app.route('/municipiosNombre/<nombre>')
 def municipioNombre(nombre):
     mostrar = []
-    connection = pymysql.connect(user='root',
-                                 password='',
+    connection = pymysql.connect(user='locia@codigospdb',
+                                 password='Gal14695238',
                                  database='codigospostales_bd',
-                                 host='localhost',
+                                 host='codigospdb.mysql.database.azure.com',
                                  cursorclass=pymysql.cursors.DictCursor,
+                                 ssl={'ca': './BaltimoreCyberTrustRoot.crt.pem'}
                                  )
 
     with connection:
@@ -274,11 +281,12 @@ def municipioNombre(nombre):
 @app.route('/estadoNombre/<nombre>')
 def estadoNombre(nombre):
     mostrar = []
-    connection = pymysql.connect(user='root',
-                                 password='',
+    connection = pymysql.connect(user='locia@codigospdb',
+                                 password='Gal14695238',
                                  database='codigospostales_bd',
-                                 host='localhost',
+                                 host='codigospdb.mysql.database.azure.com',
                                  cursorclass=pymysql.cursors.DictCursor,
+                                 ssl={'ca': './BaltimoreCyberTrustRoot.crt.pem'}
                                  )
 
     with connection:
@@ -318,11 +326,12 @@ def estadoNombre(nombre):
 @app.route('/agregar', methods=['POST'])
 def agregar():
     print(request.json)
-    connection = pymysql.connect(user='root',
-                                 password='',
+    connection = pymysql.connect(user='locia@codigospdb',
+                                 password='Gal14695238',
                                  database='codigospostales_bd',
-                                 host='localhost',
+                                 host='codigospdb.mysql.database.azure.com',
                                  cursorclass=pymysql.cursors.DictCursor,
+                                 ssl={'ca': './BaltimoreCyberTrustRoot.crt.pem'}
                                  )
 
     with connection:
