@@ -30,7 +30,7 @@ https://codigospapp.azurewebsites.net/municipiosNombre/Chilpancingo de los Bravo
 
 
 **Ruta para buscar estados  a través  del nombre**
-https://codigospapp.azurewebsites.net/estadosNombre/Guerrero
+https://codigospapp.azurewebsites.net/estadoNombre/Guerrero
 
 
 **Ruta para cargar**
