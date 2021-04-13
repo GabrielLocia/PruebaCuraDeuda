@@ -15,3 +15,26 @@ instalar el modulo de **Pandas** con pip install pandas para manejar los archivo
 Cabe aclarar que esta instalación es para los sistemas Windosw 
 
 Si se instala  en linux será nesesario mirar la documentación de python para instalar los paquetes nesesarios en dicho sistema. 
+
+Para probar la Api y las diferentes rutas se debe espeficar de la siguiente forma: 
+
+**Ruta para buscar por colonia a través de CP**
+https://codigospapp.azurewebsites.net/colonias/39105
+
+**Ruta para buscar colonias a través  del nombre**
+https://codigospapp.azurewebsites.net/coloniasNombre/Guadalupe
+
+
+**Ruta para buscar municipios  a través  del nombre**
+https://codigospapp.azurewebsites.net/municipiosNombre/Chilpancingo de los Bravo
+
+
+**Ruta para buscar estados  a través  del nombre**
+https://codigospapp.azurewebsites.net/estadosNombre/Guerrero
+
+
+**Ruta para cargar**
+https://codigospapp.azurewebsites.net/Carga
+
+En esta ruta se puede cargar los archivos de los codigos postales por medio de los archivos csv 
+en esta version no es posible cambiar entre archivos quedo pendiente esa implementación, es bueno aclarar que el método para cargar una gran cantidad de datos es ineficiente en este punto es por eso que se opto por reducir el número de registros durante las pruebas. 
