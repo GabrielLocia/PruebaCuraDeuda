@@ -10,4 +10,8 @@ esto abrira un servidor local donde sera montada la app finalmente ejecutar flas
 
 instalar el modulo  **pymysql** con pip install  pymysql para poder hacer uso de el conector a mysql.
 
-instalar el modulo de **Pandas** con pip install pandas para manejar los archivos csv
+instalar el modulo de **Pandas** con pip install pandas para manejar los archivos csv. 
+
+Cabe aclarar que esta instalación es para los sistemas Windosw 
+
+Si se instala  en linux será nesesario mirar la documentación de python para instalar los paquetes nesesarios en dicho sistema. 
